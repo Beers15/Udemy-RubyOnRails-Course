@@ -3,7 +3,6 @@ class ArticlesController < ApplicationController
 		@articles = Article.all
 	end
 
-
 	def new
 		@article = Article.new
 	end
@@ -36,6 +35,15 @@ class ArticlesController < ApplicationController
 			render 'edit'
 		end
 	end
+
+	def destroy
+		@article = Article.find(params[:id])
+		@article.destroy
+		flash[:notice] = "Article deleted!"
+
+		redirect_to articles_path
+	end
+
 
 	private def get_params
 		params.require(:article).permit(:title, :description)

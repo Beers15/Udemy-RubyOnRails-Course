@@ -1,3 +1,11 @@
+@import 'bootstrap/dist/css/bootstrap';
+
+.article-actions {
+	border-top: 1px solid #eaeaea;
+	padding-top: 5px;
+
+}
+
 #logo {
 	float: left;
 	font-size: 1.7em;
@@ -34,5 +42,3 @@
       margin: 20px 0;
     }
 }
-
-@import "bootstrap";

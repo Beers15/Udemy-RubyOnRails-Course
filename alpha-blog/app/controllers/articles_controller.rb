@@ -5,6 +5,10 @@ class ArticlesController < ApplicationController
 		@articles = Article.all
 	end
 
+	def show
+		set_article
+	end
+
 	def new
 		@article = Article.new
 	end
@@ -19,10 +23,6 @@ class ArticlesController < ApplicationController
 		else
 		   render 'new'
 		end		
-	end
-
-	def show
-		set_article
 	end
 
 	def edit

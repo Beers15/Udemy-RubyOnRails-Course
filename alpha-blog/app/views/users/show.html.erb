@@ -1,0 +1,8 @@
+<br><h1 align="center">Welcome <%= @user.username %> to Alpha Blog</h1><hr>
+<div class="row">
+	<div align="center" class="col-md-12">
+		<%= gravatar_for @user %>
+	</div>
+</div>
+<h4 align="center"><br><%= @user.username %>'s articles</h4><hr>
+<%= render 'articles/article', obj: @user.articles %>

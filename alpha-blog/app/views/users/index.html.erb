@@ -1,5 +1,6 @@
 <br><h1 align="center">Alpha blog users</h1><hr>
 <div align="center">
+	<%= will_paginate renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
 	<% @users.reverse.each do |user| %>
 		<ul class="listing">
 			<div class="row">

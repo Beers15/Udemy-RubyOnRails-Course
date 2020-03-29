@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
 			redirect_to user_path(user)
 		else
 			flash[:danger] = "Login failed. Please try inputting a valid email and password."
-			render 'new', :danger
+			redirect_to login_path
 		end
 	end
 

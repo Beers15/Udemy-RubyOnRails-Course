@@ -1,4 +1,9 @@
-<br><h1 align="center"><%= "Category: " + @category.name %></h1>
+<div align="center">
+	<br><h1 ><%= "Category: " + @category.name %></h1>
+	<% if logged_in? and current_user.admin? %>
+		<span class="badge"><%= link_to "Edit Category Name", edit_category_path(@category) %> </span>
+	<% end %>
+</div>
 <hr>
 
 <%= will_paginate @category_articles, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
